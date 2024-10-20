@@ -1,6 +1,7 @@
 {
   "name": "vscode-quosty-theme",
   "displayName": "vscode-quosty-theme",
+  "publisher": "titivuk",
   "description": "",
   "version": "0.0.1",
   "engines": {
