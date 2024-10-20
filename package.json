@@ -1,0 +1,28 @@
+{
+  "name": "vscode-quosty-theme",
+  "displayName": "vscode-quosty-theme",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "build": "node themes/generate-theme.js",
+    "watch": "node --watch themes/generate-theme.js"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "vscode-quosty-theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/quosty-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5"
+  }
+}
