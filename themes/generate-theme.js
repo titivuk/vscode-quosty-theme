@@ -29,6 +29,8 @@ const colors = {
 
     orange: {
         base: "#D08770",
+        // bright: '#D79784',
+        dim: '#CB775D',
     },
 
     green: {
@@ -91,6 +93,18 @@ const theme = {
         "editorGutter.modifiedBackground": mapping.change.modified,
         "editorGutter.addedBackground": mapping.change.added,
         "editorGutter.deletedBackground": mapping.change.deleted,
+        // border between 2 splits
+        "editorGroup.border": mapping.border,
+        "editorGroupHeader.tabsBackground": mapping.bg_3,
+        "editorGroupHeader.tabsBorder": mapping.transparent,
+        "tab.activeBackground": mapping.bg_2,
+        "tab.inactiveBackground": mapping.bg_2,
+        "tab.activeBorderTop": colors.orange.dim,
+        "tab.activeBorder": mapping.transparent,
+        "tab.activeForeground": mapping.fg,
+        "tab.inactiveForeground": mapping.fg,
+        "tab.hoverBackground": mapping.bg_2,
+        "tab.border": mapping.bg,
         // git colors for file names, etc
         "gitDecoration.modifiedResourceForeground": mapping.change.modified,
         "gitDecoration.untrackedResourceForeground": mapping.change.added,
@@ -103,23 +117,14 @@ const theme = {
         "editorLineNumber.activeForeground": mapping.fg,
         "selection.background": mapping.selection_bg,
         "focusBorder": mapping.transparent,
+        // file explorer, source control, etc
         "sideBar.background": mapping.bg,
         "sideBar.foreground": mapping.fg,
-        "sideBar.border": mapping.transparent,
-        "sideBarTitle.foreground": colors.yellow.base,
+        "sideBar.border": mapping.bg_3,
+        "sideBarTitle.foreground": mapping.fg,
         "sideBarSectionHeader.background": mapping.bg_3,
         "sideBarSectionHeader.foreground": mapping.fg,
         "sideBarSectionHeader.border": mapping.transparent,
-        "editorGroup.border": mapping.transparent,
-        "editorGroupHeader.tabsBackground": mapping.bg_3,
-        "editorGroupHeader.tabsBorder": mapping.transparent,
-        "tab.activeBackground": mapping.bg,
-        "tab.inactiveBackground": mapping.bg_2,
-        "tab.activeBorderTop": mapping.transparent,
-        "tab.activeBorder": mapping.transparent,
-        "tab.activeForeground": mapping.fg,
-        "tab.inactiveForeground": mapping.fg,
-        "tab.hoverBackground": mapping.bg_2,
         "statusBar.background": mapping.bg_3,
         "statusBarItem.remoteBackground": mapping.bg_3,
         "statusBarItem.remoteForeground": mapping.fg,
@@ -135,10 +140,11 @@ const theme = {
         "activityBarTop.inactiveForeground": mapping.fg_2,
         "activityBarTop.activeBorder": mapping.transparent,
         "scrollbar.shadow": mapping.shadow,
-        "scrollbarSlider.background": mapping.bg_2,
-        "scrollbarSlider.hoverBackground": mapping.bg_3,
+        "scrollbarSlider.background": mapping.selection_bg + "9F",
+        "scrollbarSlider.hoverBackground": mapping.selection_bg + "9F",
         "menu.background": mapping.bg_2,
         "menu.foreground": mapping.fg,
+        // Panels are shown below the editor area and contain views like Output and Integrated Terminal
         "panel.background": mapping.bg,
         "panel.border": mapping.border,
         "panelTitle.activeForeground": mapping.fg,
@@ -202,6 +208,13 @@ const theme = {
         "quickInputList.focusForeground": mapping.fg,
         "quickInputList.focusBackground": mapping.selection_bg,
         "quickInputList.focusIconForeground": mapping.fg,
+        // https://code.visualstudio.com/api/references/theme-color#button-control
+        "dropdown.background": mapping.bg_3,
+        "dropdown.border": mapping.transparent,
+        "dropdown.listBackground": mapping.bg_3,
+        // https://code.visualstudio.com/api/references/theme-color#debug-colors
+        "debugToolBar.background": mapping.bg,
+        "debugToolBar.border": mapping.border,
     },
     "tokenColors": [
         {
